@@ -1,7 +1,8 @@
-package com.example.shaunreddy.chatterchallenge
+package com.example.shaunreddy.chatterchallenge.view
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.shaunreddy.chatterchallenge.R
 
 class MainActivity : AppCompatActivity() {
 
