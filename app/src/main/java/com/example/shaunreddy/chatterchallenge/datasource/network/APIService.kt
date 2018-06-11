@@ -7,5 +7,5 @@ import retrofit2.http.GET
 
 interface APIService {
     @GET(Constants.endUrl)
-    fun getBankDetails() : Observable<BankDetails>
+    fun getBankDetails() : Observable<List<BankDetails>>
 }

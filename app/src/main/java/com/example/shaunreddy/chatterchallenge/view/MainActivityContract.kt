@@ -1,11 +1,14 @@
 package com.example.shaunreddy.chatterchallenge.view
 
-interface MainActivityContract {
-    interface IMainActivity{
+import com.example.shaunreddy.chatterchallenge.model.BankDetails
 
+interface MainActivityContract {
+    interface IMainActivity {
+        public fun populateRecyclerView()
     }
 
-    interface IPresenter{
-
+    interface IPresenter {
+        public fun getBankDetails()
+        public fun populateRecyclerView(bankDetails: List<BankDetails>)
     }
 }
