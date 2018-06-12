@@ -5,6 +5,7 @@
     <string name="ROI">Return On Investment:</string>
     <string name="ROI_post_fix">% (ROI)</string>
     <string name="network_error_message">No Network Connectivity</string>
+    <string name="blank">$%d</string>
 </resources>
 
 
