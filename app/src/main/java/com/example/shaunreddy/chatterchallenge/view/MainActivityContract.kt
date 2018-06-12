@@ -4,11 +4,14 @@ import com.example.shaunreddy.chatterchallenge.model.BankDetails
 
 interface MainActivityContract {
     interface IMainActivity {
-        public fun populateRecyclerView()
+         fun populateRecyclerView(bankDetails: List<BankDetails>)
+         fun handleNetworkError()
+         fun showProgressbar(message : String)
     }
 
     interface IPresenter {
-        public fun getBankDetails()
-        public fun populateRecyclerView(bankDetails: List<BankDetails>)
+         fun getBankDetails(mainActivity: MainActivity)
+         fun populateRecyclerView(bankDetails: List<BankDetails>)
+         fun handleError(throwable: Throwable)
     }
 }

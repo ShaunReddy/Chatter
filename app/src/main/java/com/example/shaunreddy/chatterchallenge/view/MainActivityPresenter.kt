@@ -1,29 +1,33 @@
 package com.example.shaunreddy.chatterchallenge.view
 
-import android.view.View
-import com.example.shaunreddy.chatterchallenge.datasource.network.DataManager
+import com.example.shaunreddy.chatterchallenge.datasource.IDataManager
+import com.example.shaunreddy.chatterchallenge.datasource.DataManager
 import com.example.shaunreddy.chatterchallenge.model.BankDetails
-import com.example.shaunreddy.chatterchallenge.utils.dagger.DaggerComponent
-import com.example.shaunreddy.chatterchallenge.utils.dagger.PresenterModule
-import com.example.shaunreddy.chatterchallenge.utils.dagger.ViewModule
-import javax.inject.Inject
 
-class MainActivityPresenter : MainActivityContract.IPresenter {
-    @Inject
-    lateinit var mainActivityPresenter: MainActivityPresenter
-    @Inject
-    lateinit var dataManager: DataManager
+
+class MainActivityPresenter(mainActivity: MainActivityContract.IMainActivity) : MainActivityContract.IPresenter {
+
+
+
+     var mainActivity: MainActivityContract.IMainActivity
+     var iDataManager: IDataManager
 
     init {
-        DaggerComponent.builder().build().injectView(this)
-        DaggerComponent.builder().build().injectDataManager(this)
+        this.mainActivity = mainActivity
+        this.iDataManager = DataManager(this)
+        //DaggerComponent.builder().dataManagerModule(DataManagerModule(this)).build().injectDataManager(this)
     }
 
-    public override fun getBankDetails() {
-        dataManager.getBankDetails()
+     override fun getBankDetails(mainActivity: MainActivity) {
+         this.mainActivity = mainActivity
+
+        iDataManager.getBankDetails()
     }
 
-    public override fun populateRecyclerView(bankDetails: List<BankDetails>) {
+     override fun populateRecyclerView(bankDetails: List<BankDetails>) {
+        mainActivity.populateRecyclerView(bankDetails)
+    }
+    override fun handleError(throwable: Throwable) {
 
     }
 }

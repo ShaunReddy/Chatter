@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_cv_elevation">10dp</dimen>
+    <dimen name="dimen_cv_radius">10dp</dimen>
+    <dimen name="dimen_tv_name_size">30sp</dimen>
+    <dimen name="dimen_tv_amount_size">25sp</dimen>
+    <dimen name="dimen_tv_margin">8dp</dimen>
+    <dimen name="dimen_cv_marginSides">15dp</dimen>
+    <dimen name="dimen_cv_marginTopBottom">20dp</dimen>
+    <dimen name="dimen_cv_margin">10dp</dimen>
+</resources>

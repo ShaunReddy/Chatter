@@ -8,14 +8,16 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetrofitInstance {
 
 
-    public companion object {
-        private lateinit var retrofitIstance : Retrofit;
-        public fun getRetrofitInstance() : Retrofit{
-            if(retrofitIstance == null){
-                retrofitIstance = Retrofit.Builder().baseUrl(Constants.baseUrl).addConverterFactory(GsonConverterFactory.create())
-                        .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build();
-            }
-            return retrofitIstance;
+     companion object {
+        private lateinit var retrofitIstance : Retrofit
+         fun getRetrofitInstance() : Retrofit{
+
+                retrofitIstance = Retrofit.Builder().baseUrl(Constants.BASE_URL)
+                        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build()
+
+            return retrofitIstance
         }
     }
 }
