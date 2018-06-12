@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity"
-    android:orientation="vertical">
-   <ProgressBar
-       android:id="@+id/determinateBar"
-       style="@android:style/Widget.ProgressBar.Large.Inverse"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:progress="25"/>
+    android:id="@+id/coordinatorLayout"
+    tools:context=".view.banklist.MainActivity">
    <android.support.v7.widget.RecyclerView
        android:id="@+id/rv_bankDetails"
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

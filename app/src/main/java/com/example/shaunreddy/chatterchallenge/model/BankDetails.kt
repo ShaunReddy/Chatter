@@ -34,19 +34,30 @@ class BankDetails() : Parcelable{
         return ROI
     }
 
-
+    /**
+     * Marshes the object
+     * @param parcel : Parcel
+     * @param flags : Int
+     */
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)
         parcel.writeInt(id)
+        // converting bigDecimal to String to make the variables amount and ROI parcelable
         parcel.writeString(amount.toString())
         parcel.writeString(ROI.toString())
     }
+
 
     override fun describeContents(): Int {
         return 0
     }
 
     companion object CREATOR : Parcelable.Creator<BankDetails> {
+        /**
+         * Create the object from parcel
+         * @param parcel : Parcel
+         * @return BankDetails
+         */
         override fun createFromParcel(parcel: Parcel): BankDetails {
             return BankDetails(parcel)
         }

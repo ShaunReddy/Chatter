@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ChatterChallenge</string>
+    <string name="dollor_sign">$</string>
+    <string name="amount">Amount:</string>
+    <string name="ROI">Return On Investment:</string>
+    <string name="ROI_post_fix">% (ROI)</string>
+    <string name="network_error_message">No Network Connectivity</string>
 </resources>
+
+

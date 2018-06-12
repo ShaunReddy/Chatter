@@ -6,51 +6,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/dimen_cv_margin"
-    app:cardCornerRadius="@dimen/dimen_cv_radius"
     android:elevation="@dimen/dimen_cv_elevation"
-    tools:context=".view.details.DetailsScreen">
+    app:cardCornerRadius="@dimen/dimen_cv_radius"
+    tools:context=".view.bankdetails.DetailsScreen">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/details_tv_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/dimen_tv_name_size"
-            android:layout_margin="@dimen/dimen_tv_margin"
-            android:textStyle="bold"
-            android:shadowColor="#000000"
-            android:shadowDx="1.5"
-            android:shadowDy="1.3"
-            android:shadowRadius="1.6"
-            android:textColor="@color/colorWhite"
-            />
-        <TextView
-            android:id="@+id/details_tv_amount"
+            style="@style/TextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dimen_tv_margin"
-            android:textSize="@dimen/dimen_tv_amount_size"
-            android:textColor="@color/colorWhite"
-            android:shadowColor="#000000"
-            android:shadowDx="1.5"
-            android:shadowDy="1.3"
-            android:shadowRadius="1.6"
-            android:textStyle="bold"
-            />
-        <TextView
-            android:id="@+id/details_tv_ROI"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/dimen_tv_name_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_one_dp"
+            android:background="@color/colorWhite" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_tv_margin">
+
+            <TextView
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dimen_tv_padding_left"
+                android:text="@string/amount"
+                android:textSize="@dimen/dimen_tv_amount_size" />
+
+            <TextView
+                android:id="@+id/details_tv_amount"
+                style="@style/TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_tv_amount_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/dimen_tv_margin"
-            android:textSize="@dimen/dimen_tv_amount_size"
-            android:textStyle="bold"
-            android:shadowColor="#000000"
-            android:shadowDx="1.5"
-            android:shadowDy="1.3"
-            android:shadowRadius="1.6"
-            android:textColor="@color/colorWhite"
-            />
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dimen_tv_padding_left"
+                android:text="@string/ROI"
+                android:textSize="@dimen/dimen_tv_amount_size" />
+
+            <TextView
+                android:id="@+id/details_tv_ROI"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_tv_amount_size" />
+
+            <TextView
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ROI_post_fix"
+                android:textSize="@dimen/dimen_tv_amount_size" />
+        </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>

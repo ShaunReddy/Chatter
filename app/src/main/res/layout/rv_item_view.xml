@@ -20,7 +20,6 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/dimen_tv_name_size"
         android:layout_margin="@dimen/dimen_tv_margin"
-        android:textStyle="bold"
         />
     <TextView
         android:id="@+id/tv_amount"
@@ -28,7 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_tv_margin"
         android:textSize="@dimen/dimen_tv_amount_size"
-        android:textStyle="bold"
         />
     </LinearLayout>
 </android.support.v7.widget.CardView>
